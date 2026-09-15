@@ -3,7 +3,7 @@ let cartCount = 0;
 function loadMenu() {
     console.log("Fetching menu data...");
     
-    fetch('./pizza-json')
+    fetch('./pizza.json')
         .then(response => {
             if (!response.ok) throw new Error("Network response was not ok");
             return response.json();
@@ -12,10 +12,10 @@ function loadMenu() {
             const menuSection = document.getElementById('menu');
             menuSection.innerHTML = ""; // تفريغ السيكشن
 
-            if (data.pizzas && data.pizzas.length > 0) {
+            if (data && data.length > 0) {
                 // تجميع البيتزا في مجموعات حسب النوع (Category)
                 const categories = {};
-                data.pizzas.forEach(pizza => {
+                data.forEach(pizza => {
                     if (!categories[pizza.category]) {
                         categories[pizza.category] = [];
                     }
@@ -37,9 +37,9 @@ function loadMenu() {
                                 <h2>${pizza.name}</h2>
                                 <p>${pizza.ingredients}</p>
                                 <div class="pizza-price">
-                                    <span class="size-btn">S<br> ${pizza.prices.S} L.E</span>
-                                    <span class="size-btn">M<br> ${pizza.prices.M} L.E</span>
-                                    <span class="size-btn">L<br> ${pizza.prices.L} L.E</span>
+                                   <span class="size-btn">S<br> ${pizza.S || pizza.price_small || (pizza.prices && pizza.prices.S) || 0} L.E</span>
+<span class="size-btn">M<br> ${pizza.M || pizza.price_medium || (pizza.prices && pizza.prices.M) || 0} L.E</span>
+<span class="size-btn">L<br> ${pizza.L || pizza.price_large || (pizza.prices && pizza.prices.L) || 0} L.E</span>
                                 </div>
                                 <button class="add-to-cart">Add To Cart</button>
                             </div>
