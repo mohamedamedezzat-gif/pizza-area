@@ -12,10 +12,12 @@ function loadMenu() {
             const menuSection = document.getElementById('menu');
             menuSection.innerHTML = ""; // تفريغ السيكشن
 
-            if (data && data.length > 0) {
-                // تجميع البيتزا في مجموعات حسب النوع (Category)
+            // قراءة المزيج الصحيح للبيانات من data.pizzas
+            if (data.pizzas && data.pizzas.length > 0) {
                 const categories = {};
-                data.forEach(pizza => {
+                
+                // تجميع البيتزا حسب Category
+                data.pizzas.forEach(pizza => {
                     if (!categories[pizza.category]) {
                         categories[pizza.category] = [];
                     }
@@ -23,7 +25,6 @@ function loadMenu() {
                 });
 
                 for (const categoryName in categories) {
-                    
                     let displayTitle = categoryName.toLowerCase().includes("pizza") 
                                        ? categoryName 
                                        : categoryName + " Pizza";
@@ -37,16 +38,15 @@ function loadMenu() {
                                 <h2>${pizza.name}</h2>
                                 <p>${pizza.ingredients}</p>
                                 <div class="pizza-price">
-                                   <span class="size-btn">S<br> ${pizza.S || pizza.price_small || (pizza.prices && pizza.prices.S) || 0} L.E</span>
-<span class="size-btn">M<br> ${pizza.M || pizza.price_medium || (pizza.prices && pizza.prices.M) || 0} L.E</span>
-<span class="size-btn">L<br> ${pizza.L || pizza.price_large || (pizza.prices && pizza.prices.L) || 0} L.E</span>
+                                    <span class="size-btn">S<br> ${pizza.prices.S} L.E</span>
+                                    <span class="size-btn">M<br> ${pizza.prices.M} L.E</span>
+                                    <span class="size-btn">L<br> ${pizza.prices.L} L.E</span>
                                 </div>
                                 <button class="add-to-cart">Add To Cart</button>
                             </div>
                         `;
                     });
                 }
-                
 
                 rebindEvents(); 
             } else {
@@ -82,12 +82,13 @@ function rebindEvents() {
                 const sizeName = fullText.charAt(0);
 
                 cartCount++;
-                cartText.textContent = "Cart: " + cartCount;
+                if (cartText) cartText.textContent = "Cart: " + cartCount;
 
-                cartMessage.textContent = pizzaName + " (Size: " + sizeName + ") added to cart!";
-                cartMessage.classList.add("show");
-
-                setTimeout(() => cartMessage.classList.remove("show"), 1500);
+                if (cartMessage) {
+                    cartMessage.textContent = pizzaName + " (Size: " + sizeName + ") added to cart!";
+                    cartMessage.classList.add("show");
+                    setTimeout(() => cartMessage.classList.remove("show"), 1500);
+                }
 
                 button.textContent = "Added!";
                 setTimeout(() => button.textContent = "Add To Cart", 1000);
