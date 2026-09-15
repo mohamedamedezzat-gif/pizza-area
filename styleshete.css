@@ -1,0 +1,240 @@
+ html {
+  scroll-behavior: smooth;
+}
+ body {
+  margin: 0;
+ font-family: "Inknut Antiqua", serif;
+
+}
+
+.hero {
+  height: 100vh;
+  background-image: url("canva-MADapGtPs6k.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 35px;
+}
+
+.navbar h1 {
+  color: white;
+  font-size: 32px;
+  margin: 0;
+}
+
+.navbar-links a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: 35px;
+  font-size: 20px;
+}
+
+.hero-text {
+  color: white;
+  font-weight: bold;
+  margin-left: 25px;
+  margin-top: 60px;
+  width: fit-content;
+}
+
+.hero-text h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero-text button {
+  background-color: #ff7a00;
+  border: none;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.menu-section {
+  text-align: center;
+  padding: 0 0 30px ;
+}
+.menu-section h1{
+  background-color: #FDF5E6;
+  color: black;
+  text-align: center;
+  padding: 45px 0;
+  margin: 0;
+ 
+}
+.pizza-card {
+  width: 80%;
+  max-width: 420px;
+  margin: 0 auto 45px;
+  padding: 25px 15px;
+  text-align: center;
+  border-bottom: 3px solid #ccc;
+  
+}
+.pizza-card img {
+  width: 260px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 15px;
+}
+.pizza-price{
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 15px 0;
+}
+.pizza-price span{
+  background-color: #FDF5E6;
+  color: black;
+  text-align: center;
+  padding: 8px 10px;
+  min-width: 55px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+.pizza-card button{
+  color: black;
+  background-color: #ff7a00;
+  font-weight: bold;
+  padding: 8px 50px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+  border: none;
+}
+.pizza-card button:hover{
+  background-color:#ff7a00 ;
+  color: white;
+  transform: scale(1.08);
+
+}
+.pizza-price span:hover{
+  background-color: #FDF5E6;
+  color: black;
+  transform: scale(1.08);
+}
+.offers-section{
+  text-align: center;
+  padding:0 0 70px ;
+  background-color: white;
+  font-size: 16px;
+  line-height: 1.8;
+  padding:20px 0;
+  margin: 35px auto 0;
+}
+
+
+
+.offers-section h1{
+  text-align: center;
+  background-color: #FDF5E6;
+  font-weight:bold ;
+  padding: 45px 0;
+  margin: 0;
+}
+.about-section h1{
+  background-color: #FDF5E6;
+  color: black;
+  text-align: center;
+  padding: 45px  0;
+  margin: 0;
+  font-weight: bold;
+
+}
+.about-section{
+  text-align: center;
+  background-color: white;
+  padding: 0 0 70px ;
+  font-weight: bold;
+  margin: 35px auto 0;
+  line-height: 1.8;
+}
+.footer{
+  background-color: #ff7a00;
+  text-align: center;
+  font-weight: bold;
+  padding: 30px 0 ;
+  margin: 0 ;
+  line-height: 1.8;  
+}
+.footer h1{
+  background-color: #FDF5E6;
+  color: black;
+  text-align: center;
+  padding: 28px 0;
+  margin: 0;
+  font-weight: bold;
+}
+#cart-count{
+  color: white;
+  font-weight: bold;
+  margin-left: 25px;
+  font-size: 18px;
+}
+.order-btn {
+  display: inline-block;
+  background-color: #ff7a00;
+  color: black;
+  margin-top: 90px;
+  font-weight: normal;
+  padding: 2px 18px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+  transition: 0.3s;
+
+}
+
+.order-btn:hover{
+  color: white;
+  transition: scale(1.08);
+
+}
+.cart-message {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #ff7a00;
+  color: black;
+  padding: 10px 18px;
+  font-weight: bold;
+  display: none;
+  z-index: 1000;
+}
+
+.cart-message.show {
+  display: block;
+}
+@media (max-width: 768px) {
+  .menu-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; 
+    gap: 15px;
+  }
+  .navbar-links a {
+    margin-left: 15px; 
+    font-size: 16px;
+  }
+}
