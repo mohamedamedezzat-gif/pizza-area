@@ -1,0 +1,84 @@
+{
+  "pizzas": [
+    {
+      "id": "1",
+      "name": "Chicken BBQ",
+      "category": "Chicken",
+      "prices": {
+        "S": "160",
+        "M": "210",
+        "L": "400"
+      },
+      "image": "bbq-chicken-pizza-feature-1536x1024.jpg",
+      "ingredients": "Ingredients: Grilled chicken, mozzarella cheese, red onions, and sweet corn, all topped with our special BBQ sauce."
+    },
+    {
+      "id": "2",
+      "name": "Chicken Ranch",
+      "category": "Chicken",
+      "prices": {
+        "S": "170",
+        "M": "220",
+        "L": "270"
+      },
+      "image": "chicken-bacon-ranch1.jpg",
+      "ingredients": "Ingredients: Grilled chicken, mozzarella, fresh tomatoes, and green peppers, drizzled with our creamy signature Ranch sauce."
+    },
+    {
+      "id": "3",
+      "name": "Original Chicken",
+      "category": "Chicken",
+      "prices": {
+        "S": "150",
+        "M": "200",
+        "L": "550"
+      },
+      "image": "Chicken-Pizza.jpg",
+      "ingredients": "Ingredients: Grilled chicken breast, mozzarella cheese, fresh bell peppers, red onions, and our signature tomato sauce."
+    },
+    {
+      "id": "4",
+      "name": "Meat Lovers",
+      "category": "Beef",
+      "prices": {
+        "S": "180",
+        "M": "240",
+        "L": "300"
+      },
+      "image": "meat-lovers-pizza-28-1200.jpg",
+      "ingredients": "Ingredients: A rich mix of beef pepperoni, spicy sausage, and ground beef with extra mozzarella cheese."
+    },
+    {
+      "id": "5",
+      "name": "Smoky BBQ Beef",
+      "category": "Beef",
+      "prices": {
+        "S": "180",
+        "M": "230",
+        "L": "280"
+      },
+      "image": "large_barbecue-beef-bacon-pizza.jpg",
+      "ingredients": "Ingredients: Marinated ground beef, smoked cheddar, red onions, and a drizzle of bold BBQ sauce."
+    },
+    {
+      "id": "6",
+      "name": "Beef Pepperoni",
+      "category": "Beef",
+      "prices": {
+        "S": "200",
+        "M": "210",
+        "L": "800"
+      },
+      "image": "Falafina-Products-19.webp",
+      "ingredients": "Ingredients: Premium beef pepperoni slices, mozzarella cheese, and our special herb-infused tomato sauce."
+    }
+  ],
+  "offers": [
+    {
+      "id": "1",
+      "title": "Exclusive Offers",
+      "description": "Quality You Crave, Value You Love At Pizza Area!"
+    }
+  ],
+  "about": "Founded on a passion for authentic flavors, Pizza Area brings the heart of Italy to your table."
+}
