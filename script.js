@@ -3,7 +3,7 @@ let cartCount = 0;
 function loadMenu() {
     console.log("Fetching menu data...");
     
-    fetch('http://localhost/pizza-area/back-end/index.php')
+    fetch('./pizza-json')
         .then(response => {
             if (!response.ok) throw new Error("Network response was not ok");
             return response.json();
